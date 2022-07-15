@@ -1,5 +1,6 @@
 import readLine from 'readline-sync';
 import salario from './filtragemDeDados/listaDosSalarios.js';
+import salarios from './listaDeDados/listaDeSalarios.js';
 
 console.log(`Escolha uma das alternativas:\n\n`);
 
@@ -23,10 +24,7 @@ switch(escolha){
     break;
 
   case '3':
-    console.log(`Ano: `);
-    console.log(`Salário mínimo: `);
-    console.log(`Crescimento salarial: `);
-    console.log(`Inflação IPCA: `);
+    salario(salarios);
     break;
 
   default:

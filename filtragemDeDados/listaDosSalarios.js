@@ -1,5 +1,6 @@
 import salarios from '../listaDeDados/listaDeSalarios.js';
 import inflacoes from '../listaDeDados/listaDeInflacoes.js';
+import crescimentoPercentual from '../calculosPercentuais/crescimentoSalarial.js';
 
 const retornaSalario = (salarios) => {
 
@@ -9,7 +10,7 @@ const retornaSalario = (salarios) => {
         console.log(`
         Ano: ${salario.ano}
         Salário mínimo: R$ ${salario.salario.toFixed(2)}
-        Crescimento Salárial: 
+        Crescimento Salárial: ${crescimentoPercentual(salarios)}%
         Inflação IPCA: ${inflacao.percentual}%`);
       }
     }
