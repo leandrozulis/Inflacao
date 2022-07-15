@@ -10,23 +10,21 @@ const retornaPercentualCrescimento = (arr) => {
 
     if (arr[i].ano == 2010 ) {
 
-      console.log('-');
       continue;
       
+    } 
 
-    } else {
-
-      let atual = arr[i].salario;
-      let decrementoSalario = arr[i - 1].salario;
-      diferenca = atual - decrementoSalario;
-      percentualDeCrescimento = (diferenca/decrementoSalario) * 100;
-      console.log(percentualDeCrescimento.toFixed(2));
-    }
+    let atual = arr[i].salario;
+    let decrementoSalario = arr[i - 1].salario;
+    diferenca = atual - decrementoSalario;
+    percentualDeCrescimento = (diferenca/decrementoSalario) * 100;
+    return percentualDeCrescimento.toFixed(2);
+    
   }
 
 }
 
-console.log(retornaPercentualCrescimento(salarioAno));
+// console.log(retornaPercentualCrescimento(salarioAno));
 
 export default retornaPercentualCrescimento;
 

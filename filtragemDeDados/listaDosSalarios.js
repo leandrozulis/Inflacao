@@ -2,14 +2,14 @@ import salarios from '../listaDeDados/listaDeSalarios.js';
 import inflacoes from '../listaDeDados/listaDeInflacoes.js';
 import crescimentoPercentual from '../calculosPercentuais/crescimentoSalarial.js';
 
-const retornaSalario = (salarios) => {
+const opcaoTres = (salarios) => {
 
-  for (let salario of salarios) {
+  for (let dadosSalario of salarios) {
     for (let inflacao of inflacoes) {
-      if (salario.ano == inflacao.ano) {
+      if (dadosSalario.ano == inflacao.ano) {
         console.log(`
-        Ano: ${salario.ano}
-        Salário mínimo: R$ ${salario.salario.toFixed(2)}
+        Ano: ${dadosSalario.ano}
+        Salário mínimo: R$ ${dadosSalario.salario.toFixed(2)}
         Crescimento Salárial: ${crescimentoPercentual(salarios)}%
         Inflação IPCA: ${inflacao.percentual}%`);
       }
@@ -17,6 +17,14 @@ const retornaSalario = (salarios) => {
   }
 }
 
-console.log(retornaSalario(salarios));
+const opcaoUm = (salario) => {
 
-export default retornaSalario;
+  for (let dadosSalario of salario) {
+    console.log(`
+    Ano: ${dadosSalario.ano}
+    Salário mínimo: ${dadosSalario.salario.toFixed(2)}`);
+  }
+
+}
+
+export {opcaoUm, opcaoTres};
