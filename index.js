@@ -1,5 +1,5 @@
 import readLine from 'readline-sync';
-import salarios from './filtragemDeDados/listaDosSalarios.js';
+import salario from './filtragemDeDados/listaDosSalarios.js';
 
 console.log(`Escolha uma das alternativas:\n\n`);
 
